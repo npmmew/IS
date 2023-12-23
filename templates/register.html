@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Регистрация</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="mb-4">Регистрация</h2>
+    <form method="POST" action="{{ url_for('register') }}">
+      {{ form.hidden_tag() }}
+      <div class="form-group">
+        <label class="font-weight-bold">{{ form.firstName.label.text }}</label>
+        {{ form.firstName(class="form-control") }}
+        {{ form.firstName.errors }}
+      </div>
+      <div class="form-group">
+        <label class="font-weight-bold">{{ form.lastName.label.text }}</label>
+        {{ form.lastName(class="form-control") }}
+        {{ form.lastName.errors }}
+      </div>
+      <div class="form-group">
+        <label class="font-weight-bold">{{ form.email.label.text }}</label>
+        {{ form.email(class="form-control") }}
+        {{ form.email.errors }}
+      </div>
+      <div class="form-group">
+        <label class="font-weight-bold">{{ form.password.label.text }}</label>
+        {{ form.password(class="form-control") }}
+        {{ form.password.errors }}
+      </div>
+      <div class="form-group">
+        <label class="font-weight-bold">{{ form.confirm_password.label.text }}</label>
+        {{ form.confirm_password(class="form-control") }}
+        {{ form.confirm_password.errors }}
+      </div>
+      <div class="form-group">
+        {{ form.submit(class="btn btn-primary") }}
+      </div>
+      <a href="{{ url_for('login') }}">Уже есть аккаунт?</a>
+    </form>
+  </div>
+</body>
+</html>
