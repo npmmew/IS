@@ -6,7 +6,7 @@ app.config['SECRET_KEY'] = 'esafauihf38i212asefaw3fhi32'
 
 @app.route('/')
 def home():
-    return render_template('base.html')
+    return render_template('home.html')
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -32,6 +32,11 @@ def login():
         print(f'Password: {form.password.data}')
 
     return render_template('login.html', form=form)
+
+
+@app.route('/profile')
+def profile():
+    return render_template('profile.html')
 
 
 if __name__ == '__main__':

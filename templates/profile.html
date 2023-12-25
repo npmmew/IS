@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+{% endblock%}
+{% block title %}Мой профиль{% endblock %}
+
+{% block body %}
+  <header class="header">
+    <div class="header__inner">
+        <div class="logo">
+          АвтоТех
+        </div>
+        <nav>
+          <a href="">Заказы</a>
+          <a href="">История Заказов</a>
+        </nav>
+        <button class="logout">Выйти</button>
+    </div>
+  </header>
+{% endblock %}

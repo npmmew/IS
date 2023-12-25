@@ -1,0 +1,27 @@
+.header {
+    background: #333;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: #fff;
+    font-size: 26px;
+}
+
+nav a{
+    color: #bcbcbc;
+}
+
+.logout {
+    color: #ffffff;
+    background: red;
+}
