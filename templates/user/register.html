@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+{% endblock%}
+{% block title %}Регистрация{% endblock %}
+
+{% block body %}
+    <form method="post" action="{{ url_for('register') }}" class="register__form">
+        <h1 class="register__title">Регистрация</h1>
+        <input type="text" name="first_name" class="register__input" placeholder="Имя" required>
+        <input type="text" name="last_name" class="register__input" placeholder="Фамилия" required>
+        <input type="text" name="email" class="register__input" placeholder="Email" required>
+        <input type="password" name="password" class="register__input" placeholder="Пароль" required>
+        <input type="password" name="confim_password" class="register__input" placeholder="Повторите пароль" required>
+        <input type="submit" name="register" class="register__submit" value="Зарегистрироваться" required>
+        <a href="{{ url_for('login') }}" class="login__link">Уже есть аккаунт?</a>
+    </form>
+{% endblock %}

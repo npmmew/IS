@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.admin__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background: #222;
+}
+
+nav {
+    margin-left: 50px;
+}
+
+.logout__btn {
+    margin-right: 50px;
+}
+
+nav a{
+    color: #ffffff;
+}
+
+.logout__btn {
+    color: red;
+    cursor: pointer;
+}

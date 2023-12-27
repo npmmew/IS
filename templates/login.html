@@ -7,13 +7,9 @@
 
 {% block body %}
     <form method="post" action="{{ url_for('login') }}" class="login__form">
-        <h2 class="form__title">Авторизация</h2>
-      {{ form.hidden_tag() }}
-
-      {{ form.email(size=32, class="login__input") }}
-
-      {{ form.password(size=32, class="login__input") }}
-
-      {{ form.submit(class="login__submit") }}
+        <h1 class="login__title">Авторизация</h1>
+        <input type="text" class="login__input" name="email" placeholder="Логин">
+        <input type="password" class="login__input" name="password" placeholder="Пароль">
+        <input type="submit" value="Войти" class="login__submit">
     </form>
 {% endblock %}

@@ -41,9 +41,15 @@
 
 .register__button {
     font-size: 1.5rem;
-    background: #0072ff;
+    background: #06af00;
     padding: 20px 15px 20px 15px;
     text-decoration: none;
     color: #fff;
     border-radius: 4px;
+
+    transition: .2s;
+}
+
+.register__button:hover {
+    background: #068500;
 }
